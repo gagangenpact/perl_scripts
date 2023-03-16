@@ -1,0 +1,55 @@
+Perl Commands
+
+to create project using webapp file
+---------------------------------------
+$ mojo generate app LightApp webapp.pl  # should use camel case for project name otherwise it will not work with morbo command(to run webapp)
+
+$ ./myapp.pl daemon
+Web application available at http://127.0.0.1:3000
+
+$ ./myapp.pl daemon -l http://*:8080
+Web application available at http://127.0.0.1:8080
+
+$ ./myapp.pl cgi
+...CGI output...
+
+$ ./myapp.pl get /
+Hello World!
+
+$ ./myapp.pl
+...List of available commands (or automatically detected environment)...
+
+$ morbo ./myapp.pl
+Web application available at http://127.0.0.1:3000
+
+$ morbo LightApp
+Web application available at http://127.0.0.1:3000
+
+
+Steps to install libraries
+---------------------------
+Open CPAN client
+use "install" command to install library
+
+for eg:-
+cpan> install Mojolicious::Plugin::OpenAPI
+
+reference:-
+https://github.com/rai-gaurav/mojo_react_app
+
+https://github.com/jhthorsen/mojolicious-plugin-openapi/tree/main/lib/Mojolicious/Plugin
+
+https://metacpan.org/pod/DBIx::Connection#SEE-ALSO
+
+db commands
+-----------------
+
+mysql>CREATE USER '' IDENTIFIED BY '';
+
+mysql> SYSTEM mysql -u newuser -p
+
+GRANT ALL PRIVILEGES ON * . * TO '';
+FLUSH PRIVILEGES;
+
+GRANT ALL ON testdb.* TO '';
+FLUSH PRIVILEGES;
